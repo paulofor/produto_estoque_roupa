@@ -1,7 +1,7 @@
 
 <ion-header >
   <ion-navbar color="titulo">
-    <ion-title (click)="testaFoto()">CadastroProdutoPage</ion-title>
+    <ion-title (click)="testaFoto()">Cadastro Produtos</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -10,17 +10,19 @@
     <form>
     
       <ion-item>
-        <ion-label floating>Grupo Muscular</ion-label>
+        <ion-label floating>Fornecedor</ion-label>
         <ion-select>
-          <ion-option value="f">Peitoral</ion-option>
+          <ion-option value="f">Cíntia Moda</ion-option>
           <ion-option value="m">Male</ion-option>
         </ion-select>
       </ion-item>
      
       <ion-item>
-        <ion-label floating>Carga</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label floating>Produto</ion-label>
+        <ion-input type="text" value="Saia lápis lisa"></ion-input>
       </ion-item>
+
+      <img height="330" src="https://t-static.dafiti.com.br/w5Pwce5GUZMyWhWO4nBEImK7z0E=/fit-in/333x483/dafitistatic-a.akamaihd.net%2fp%2fbazz-saia-bazz-l%25c3%25a1pis-lisa-azul-marinho-8501-5002213-1-product.jpg"/>
 
       <button ion-button type="submit" block>Adicionar</button>
     </form>

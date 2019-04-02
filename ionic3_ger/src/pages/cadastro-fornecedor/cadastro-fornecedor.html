@@ -1,7 +1,7 @@
 
 <ion-header >
   <ion-navbar color="titulo">
-    <ion-title (click)="testaFoto()">CadastroFornecedorPage</ion-title>
+    <ion-title (click)="testaFoto()">Cadastro Fornecedor</ion-title>
   </ion-navbar>
 </ion-header>
 
@@ -10,16 +10,23 @@
     <form>
     
       <ion-item>
-        <ion-label floating>Grupo Muscular</ion-label>
-        <ion-select>
-          <ion-option value="f">Peitoral</ion-option>
-          <ion-option value="m">Male</ion-option>
-        </ion-select>
+        <ion-label floating>Nome</ion-label>
+        <ion-input type="text" value="Cíntia Moda"></ion-input>
       </ion-item>
-     
+
       <ion-item>
-        <ion-label floating>Carga</ion-label>
-        <ion-input type="text"></ion-input>
+        <ion-label floating>Instagram</ion-label>
+        <ion-input type="text" value="@cintiamodabr"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Site</ion-label>
+        <ion-input type="text" value="http://www.lojasmoda.com.br/cintiamodabr"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label floating>Whatsapp</ion-label>
+        <ion-input type="text" value="1199891254"></ion-input>
       </ion-item>
 
       <button ion-button type="submit" block>Adicionar</button>
