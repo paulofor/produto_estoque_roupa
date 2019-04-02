@@ -14,6 +14,7 @@ import { MovimentacaoProdutoPage } from '../pages/movimentacao-produto/movimenta
 import { CadastroProdutoPage } from '../pages/cadastro-produto/cadastro-produto';
 import { CadastroFornecedorPage } from '../pages/cadastro-fornecedor/cadastro-fornecedor';
 import { ListaProdutoFornecedorPage } from '../pages/lista-produto-fornecedor/lista-produto-fornecedor';
+import { ValorAtualEstoquePage } from '../pages/valor-atual-estoque/valor-atual-estoque';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -24,6 +25,7 @@ import { FornecedorApi } from '../shared/sdk';
 import { ClienteApi } from '../shared/sdk';
 import { EstoqueProdutoApi } from '../shared/sdk';
 import { ContatoFornecedorApi } from '../shared/sdk';
+import { ItemEstoqueApi } from '../shared/sdk';
 
 
 @NgModule({
@@ -39,6 +41,8 @@ import { ContatoFornecedorApi } from '../shared/sdk';
     CadastroFornecedorPage,
 	
     ListaProdutoFornecedorPage,
+	
+    ValorAtualEstoquePage,
 	
   ],
   imports: [
@@ -62,6 +66,8 @@ import { ContatoFornecedorApi } from '../shared/sdk';
 	
     ListaProdutoFornecedorPage,
 	
+    ValorAtualEstoquePage,
+	
   ],
   providers: [
     StatusBar,
@@ -84,6 +90,8 @@ import { ContatoFornecedorApi } from '../shared/sdk';
 	EstoqueProdutoApi,
 	
 	ContatoFornecedorApi,
+	
+	ItemEstoqueApi,
 	
     Screenshot
   ]

@@ -1,13 +1,20 @@
 
 /* tslint:disable */
 import {
+	ItemEstoque,
 } from '../index';
 
 declare var Object: any;
 export interface EstoqueProdutoInterface {
+	"id"?: number;
+	"valorEstimado"?: number;
+	listaItemEstoque?: ItemEstoque[];
 }
 
 export class EstoqueProduto implements EstoqueProdutoInterface {
+	id?: number;
+	valorEstimado?: number;
+	listaItemEstoque?: ItemEstoque[];
   constructor(data?: EstoqueProdutoInterface) {
     Object.assign(this, data);
   }
@@ -42,6 +49,14 @@ export class EstoqueProduto implements EstoqueProdutoInterface {
       idName: 'id',
       properties: {
 		
+        "id" : {
+        	name : "id",
+        	type : "number"
+        },
+        "valorEstimado" : {
+        	name : "valorEstimado",
+        	type : "number"
+        },
       },
       relations: {
       }

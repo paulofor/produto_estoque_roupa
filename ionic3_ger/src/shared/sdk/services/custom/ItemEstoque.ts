@@ -10,18 +10,17 @@ import { LoopBackFilter,  } from '../../models/BaseModels';
 import { ErrorHandler } from '../core/error.service';
 import { Observable, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { EstoqueProduto } from '../../models/EstoqueProduto';
+import { ItemEstoque } from '../../models/ItemEstoque';
 import { SocketConnection } from '../../sockets/socket.connections';
-import { ESTOQUEPRODUTO } from '../../../../dados/estoqueProduto';
+import { ITEMESTOQUE } from '../../../../dados/itemEstoque';
 //import { of } from 'rxjs';
 //Versao Ionic
 import { of } from 'rxjs/observable/of';
-import {ESTOQUEPRODUTO_VALORATUALESTOQUEPAGE} from  '../../../../dados/estoqueProduto';
 /**
  * Api services for the `Aplicacao` model.
  */
 @Injectable()
-export class EstoqueProdutoApi extends BaseLoopBackApi {
+export class ItemEstoqueApi extends BaseLoopBackApi {
 
   constructor(
     @Inject(HttpClient) protected http: HttpClient,
@@ -36,7 +35,7 @@ export class EstoqueProdutoApi extends BaseLoopBackApi {
   public patchOrCreate(data: any = {}, customHeaders?: Function): Observable<any> {
     let _method: string = "PATCH";
     let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
-    "/estoqueProdutos";
+    "/itemEstoques";
     let _routeParams: any = {};
     let _postBody: any = {
       data: data
@@ -67,7 +66,7 @@ export class EstoqueProdutoApi extends BaseLoopBackApi {
   public patchAttributes(id: any, data: any = {}, customHeaders?: Function): Observable<any> {
     let _method: string = "PATCH";
     let _url: string = LoopBackConfig.getPath() + "/" + LoopBackConfig.getApiVersion() +
-    "/estoqueProdutos/:id";
+    "/itemEstoques/:id";
     let _routeParams: any = {
       id: id
     };
@@ -84,21 +83,18 @@ export class EstoqueProdutoApi extends BaseLoopBackApi {
    * i.e. `Aplicacao`.
    */
   public getModelName() {
-    return "EstoqueProduto";
+    return "ItemEstoque";
   }
   
-  obtemPrimeiro(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<EstoqueProduto> {
-    return of(ESTOQUEPRODUTO[0]);
+  obtemPrimeiro(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<ItemEstoque> {
+    return of(ITEMESTOQUE[0]);
   }
-  obtemLista(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<EstoqueProduto[]> {
-    return of(ESTOQUEPRODUTO);
+  obtemLista(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<ItemEstoque[]> {
+    return of(ITEMESTOQUE);
   }
-  obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<EstoqueProduto> {
-    return of(ESTOQUEPRODUTO[filter.where.id]);
+  obtemElemento(filter: LoopBackFilter = {}, customHeaders?: Function) : Observable<ItemEstoque> {
+    return of(ITEMESTOQUE[filter.where.id]);
   }
 
-	getValorAtualEstoquePageLoad(filter: LoopBackFilter = {}) : Observable<EstoqueProduto> {
-		return of (ESTOQUEPRODUTO_VALORATUALESTOQUEPAGE);
-	}
   
 }

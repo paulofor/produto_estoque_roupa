@@ -9,6 +9,7 @@ import { Fornecedor } from '../../models/Fornecedor';
 import { Cliente } from '../../models/Cliente';
 import { EstoqueProduto } from '../../models/EstoqueProduto';
 import { ContatoFornecedor } from '../../models/ContatoFornecedor';
+import { ItemEstoque } from '../../models/ItemEstoque';
 export interface Models { [name: string]: any }
 
 @Injectable()
@@ -22,6 +23,7 @@ export class SDKModels {
 	Cliente: Cliente,
 	EstoqueProduto: EstoqueProduto,
 	ContatoFornecedor: ContatoFornecedor,
+	ItemEstoque: ItemEstoque,
 	User: User,
     Container: Container
   };

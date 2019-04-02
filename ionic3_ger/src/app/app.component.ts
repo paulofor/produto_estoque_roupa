@@ -10,6 +10,7 @@ import { MovimentacaoProdutoPage } from '../pages/movimentacao-produto/movimenta
 import { CadastroProdutoPage } from '../pages/cadastro-produto/cadastro-produto';
 import { CadastroFornecedorPage } from '../pages/cadastro-fornecedor/cadastro-fornecedor';
 import { ListaProdutoFornecedorPage } from '../pages/lista-produto-fornecedor/lista-produto-fornecedor';
+import { ValorAtualEstoquePage } from '../pages/valor-atual-estoque/valor-atual-estoque';
 
 
 @Component({
@@ -37,6 +38,8 @@ export class MyApp {
       { title: 'CadastroFornecedor' , component: CadastroFornecedorPage},
 	
       { title: 'ListaProdutoFornecedor' , component: ListaProdutoFornecedorPage},
+	
+      { title: 'ValorAtualEstoque' , component: ValorAtualEstoquePage},
 	
      ];
 

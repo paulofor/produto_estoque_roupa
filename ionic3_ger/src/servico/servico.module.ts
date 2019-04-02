@@ -13,6 +13,7 @@ import { FornecedorApi } from '../shared/sdk';
 import { ClienteApi } from '../shared/sdk';
 import { EstoqueProdutoApi } from '../shared/sdk';
 import { ContatoFornecedorApi } from '../shared/sdk';
+import { ItemEstoqueApi } from '../shared/sdk';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ContatoFornecedorApi } from '../shared/sdk';
 		ClienteApi,
 		EstoqueProdutoApi,
 		ContatoFornecedorApi,
+		ItemEstoqueApi,
 	],
 	declarations: 
 	[

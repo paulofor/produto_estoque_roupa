@@ -3,6 +3,7 @@
 import {
 	MovimentoSaida,
 	MovimentoEntrada,
+	ItemEstoque,
 	Fornecedor,
 } from '../index';
 
@@ -14,6 +15,7 @@ export interface ProdutoInterface {
 	fornecedor?: Fornecedor;
 	listaMovimentoSaida?: MovimentoSaida[];
 	listaMovimentoEntrada?: MovimentoEntrada[];
+	listaItemEstoque?: ItemEstoque[];
 }
 
 export class Produto implements ProdutoInterface {
@@ -23,6 +25,7 @@ export class Produto implements ProdutoInterface {
 	fornecedor?: Fornecedor;
 	listaMovimentoSaida?: MovimentoSaida[];
 	listaMovimentoEntrada?: MovimentoEntrada[];
+	listaItemEstoque?: ItemEstoque[];
   constructor(data?: ProdutoInterface) {
     Object.assign(this, data);
   }

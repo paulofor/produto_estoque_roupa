@@ -59,6 +59,7 @@ import { FornecedorApi } from './services/custom/Fornecedor';
 import { ClienteApi } from './services/custom/Cliente';
 import { EstoqueProdutoApi } from './services/custom/EstoqueProduto';
 import { ContatoFornecedorApi } from './services/custom/ContatoFornecedor';
+import { ItemEstoqueApi } from './services/custom/ItemEstoque';
 
 /**
 * @module SDKBrowserModule
@@ -106,6 +107,8 @@ export class SDKBrowserModule {
 		EstoqueProdutoApi,
 	
 		ContatoFornecedorApi,
+	
+		ItemEstoqueApi,
 	
         internalStorageProvider,
         { provide: SDKStorage, useClass: StorageBrowser }
